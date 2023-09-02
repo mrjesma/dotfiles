@@ -26,6 +26,9 @@ local plugins = {
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  -- Navigation between nvim and tmux
+  'christoomey/vim-tmux-navigator',
+
   {
     -- Theme inspired by Atom
     'navarasu/onedark.nvim',

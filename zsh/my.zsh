@@ -3,7 +3,8 @@ export XDG_CONFIG_HOME=$HOME/.config
 export EDITOR=vim
 
 # ALIASES
-#alias foo=bar
+alias ta='tmux attach -t'
+alias ts='tmux new-session -s'
 
 # FUNCTIONS
 envg() {
