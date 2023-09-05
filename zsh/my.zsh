@@ -1,4 +1,5 @@
 # ENVIRONMENT
+export PATH=~/.config/zsh/plugins/diff-so-fancy:$PATH
 export XDG_CONFIG_HOME=$HOME/.config
 export EDITOR=vim
 
@@ -15,3 +16,6 @@ psg() {
     ps aux |grep -i "$1" |grep -v grep
 }
 
+diff() {
+    command diff -u --color=auto "$@" | diff-so-fancy | less --tabs=4 -FRXSi
+}

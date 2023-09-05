@@ -10,13 +10,14 @@ sudo apt install -y zsh fzf autojump libevent-dev ncurses-dev build-essential bi
 ### oh-my-zsh
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
-### clone dotfiles
+### setup dotfiles
 ```sh
 cd ~
 mv .config{,-bkp}
 mv .zshrc{,-bkp}
 git clone --recurse-submodules https://github.com/mrjesma/dotfiles.git .config
 ln -s ~/.config/zsh/zshrc .zshrc
+ln -s ~/.config/git/gitconfig .gitconfig
 omz reload
 ```
 
