@@ -6,6 +6,7 @@ export EDITOR=vim
 # ALIASES
 alias ta='tmux attach -t'
 alias ts='tmux new-session -s'
+alias ssh='TERM=xterm-256color ssh'     # to prevent tmux-256color over ssh
 
 # FUNCTIONS
 envg() {
