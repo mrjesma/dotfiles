@@ -1,12 +1,15 @@
 # ENVIRONMENT
 export PATH=~/.config/zsh/plugins/diff-so-fancy:$PATH
+export PATH=~/.config/bin:$PATH
 export XDG_CONFIG_HOME=$HOME/.config
 export EDITOR=vim
 
 # ALIASES
 alias ta='tmux attach -t'
 alias ts='tmux new-session -s'
-alias ssh='TERM=xterm-256color ssh'     # to prevent tmux-256color over ssh
+
+# BINDS
+bindkey -s ^t 'tmux-sessionizer\n'
 
 # FUNCTIONS
 envg() {
