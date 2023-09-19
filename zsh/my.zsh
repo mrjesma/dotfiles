@@ -1,3 +1,6 @@
+# OPTIONS
+unsetopt share_history
+
 # ENVIRONMENT
 export PATH=~/.config/zsh/plugins/diff-so-fancy:$PATH
 export PATH=~/.config/bin:$PATH
