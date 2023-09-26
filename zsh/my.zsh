@@ -12,7 +12,7 @@ alias ta='tmux attach -t'
 alias ts='tmux new-session -s'
 
 # BINDS
-bindkey -s ^t 'tmux-sessionizer\n'
+bindkey -s ^t 'tmux-sessionizer.sh\n'
 
 # FUNCTIONS
 envg() {
