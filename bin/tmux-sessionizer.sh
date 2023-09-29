@@ -4,7 +4,8 @@
 # Stole and modified from: https://github.com/ThePrimeagen/.dotfiles/blob/master/bin/.local/bin/tmux-sessionizer
 
 if [[ $# -eq 1 ]]; then
-  selected_name=${1^^}
+  selected_name=$(echo ${1^^} | cut -d '@' -f2)
+  selected=$1
   host=$1
 else
   selected=$(cat ~/repos/siemens-env/hosts | fzf --no-sort)
