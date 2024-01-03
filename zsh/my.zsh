@@ -7,6 +7,11 @@ export PATH=~/.config/bin:$PATH
 export XDG_CONFIG_HOME=$HOME/.config
 export EDITOR=vim
 
+# CUSTON ENVIRONMENT
+set -a
+source ~/repos/siemens-env/siscon
+set +a
+
 # ALIASES
 alias ta='tmux attach -t'
 alias ts='tmux new-session -s'
