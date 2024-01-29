@@ -1,0 +1,13 @@
+% git
+
+# Apply git diff file
+git apply --recount --ignore-space-change --ignore-whitespace --check file.diff
+
+# Clone ssh repo defining rsa key
+git clone -c "core.sshCommand=ssh -i /path/to/id_rsa_key -o StrictHostKeyChecking=no" ssh://git@localhost:2222/repo/path
+
+# Check repo changes history
+git reflog
+
+# Reset to previous state based on reflog
+git reset --hard HEAD@{refNumber}

@@ -1,0 +1,28 @@
+% vi, vim
+
+# Enter visual block mode
+ctrl+v
+
+# Change selected text
+c
+
+# Insert before selection or start of line
+I
+
+# Change to next open file
+:n
+
+# Split window
+:vsplit [filename]
+
+# Navegate between splits
+ctrl+w [whjkl]
+
+# Save as root even when vim not opened as root
+:w !sudo tee %
+
+# Delete line with pattern
+:g/pattern/d
+
+# Increment number in column selection
+1g ctrl+a

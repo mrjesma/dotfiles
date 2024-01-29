@@ -1,0 +1,4 @@
+% ansible
+
+# Print dynamic inventory automatic groups and hosts
+ansible-inventory -i my.proxmox.yml --graph

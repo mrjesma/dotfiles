@@ -1,0 +1,4 @@
+% sed
+
+# Group
+echo "a 123 b" |sed 's/^a \(.*\) b$/\1/'

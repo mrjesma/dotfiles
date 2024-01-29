@@ -1,0 +1,14 @@
+% yum
+
+# List repositories
+yum repolist
+
+# Check what package provide specific file
+yum whatprovides [FILE]
+
+# Information about package
+yum info [PACKAGE]
+
+# Gather information about what requires a package
+repoquery -q --installed --whatrequires [PACKAGE]
+

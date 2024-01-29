@@ -1,0 +1,4 @@
+% utils
+
+# Get IP in different formats (decimal, hexa, id)
+gethostip [HOSTNAME|IP]

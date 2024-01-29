@@ -1,0 +1,6 @@
+cheats:
+  paths:
+    - /home/ajunior/.config/navi/cheats
+
+shell:
+  command: zsh

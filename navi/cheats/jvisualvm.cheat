@@ -1,0 +1,10 @@
+% jvisualvm, spectrum
+
+# Enable and run jvisualvm on spectrum machines with X11forward
+sudo -u jboss /usr/java/latest/bin/jvisualvm
+xauth list
+echo $DISPLAY
+sudo su - jboss
+touch /home/jboss/.Xauthority
+export DISPLAY=[...]
+xauth add [...]

@@ -34,3 +34,6 @@ cd tmux-*/
 make && sudo make install
 cd ~ && sudo rm -rf /tmp/build
 ```
+
+### navi instalation
+https://github.com/denisidoro/navi/blob/master/docs/installation.md

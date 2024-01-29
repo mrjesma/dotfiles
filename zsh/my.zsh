@@ -15,6 +15,8 @@ set +a
 # ALIASES
 alias ta='tmux attach -t'
 alias ts='tmux new-session -s'
+alias navip='navi --print'
+alias navic='navi --print --cheatsh'
 
 # BINDS
 bindkey -s ^t 'tmux-sessionizer.sh\n'

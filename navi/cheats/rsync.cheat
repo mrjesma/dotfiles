@@ -1,0 +1,4 @@
+% rsync
+
+# Enable ssh compression for faster transfer rate
+rsync -avPh -e "ssh -C" [SRC] [DST]

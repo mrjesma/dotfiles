@@ -1,0 +1,7 @@
+% shell
+
+# Brace expressions - single command with multiple arguments
+echo {a,b};
+
+# Brace expressions - run command multiple times with multiple arguments, one at time
+eval echo\ {a,b}\;
