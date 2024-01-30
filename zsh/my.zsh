@@ -15,7 +15,7 @@ set +a
 # ALIASES
 alias ta='tmux attach -t'
 alias ts='tmux new-session -s'
-alias navip='navi --print'
+alias navip='navi --print |tee >(clip.exe)'
 alias navic='navi --print --cheatsh'
 
 # BINDS
