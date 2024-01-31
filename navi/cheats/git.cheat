@@ -1,10 +1,10 @@
 % git
 
 # Apply git diff file
-git apply --recount --ignore-space-change --ignore-whitespace --check file.diff
+git apply --recount --ignore-space-change --ignore-whitespace --check [FILE]
 
 # Clone ssh repo defining rsa key
-git clone -c "core.sshCommand=ssh -i /path/to/id_rsa_key -o StrictHostKeyChecking=no" ssh://git@localhost:2222/repo/path
+git clone -c "core.sshCommand=ssh -i [KEY_PATH] -o StrictHostKeyChecking=no" ssh://git@[REPO_URL]
 
 # Check repo changes history
 git reflog

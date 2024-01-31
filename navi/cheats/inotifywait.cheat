@@ -1,4 +1,4 @@
 % inotifywait
 
 # Run command on every file change
-while true; do inotifywait -e modify ${FILE} ; ${CMD}; done
+while true; do inotifywait -e modify [FILE] ; [CMD]; done

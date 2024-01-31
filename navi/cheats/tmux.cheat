@@ -1,0 +1,4 @@
+% tmux
+
+# Synchronize command to all panes
+setw synchronize-panes on

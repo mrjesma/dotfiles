@@ -13,7 +13,7 @@ I
 :n
 
 # Split window
-:vsplit [filename]
+:vsplit [FILENAME]
 
 # Navegate between splits
 ctrl+w [whjkl]
@@ -22,7 +22,7 @@ ctrl+w [whjkl]
 :w !sudo tee %
 
 # Delete line with pattern
-:g/pattern/d
+:g/PATTERN/d
 
 # Increment number in column selection
 1g ctrl+a
