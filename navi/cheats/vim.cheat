@@ -26,3 +26,9 @@ ctrl+w [whjkl]
 
 # Increment number in column selection
 1g ctrl+a
+
+# Show line number
+:set number
+
+# Show relative line number
+:set relativenumber

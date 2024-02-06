@@ -11,3 +11,6 @@ git reflog
 
 # Reset to previous state based on reflog
 git reset --hard HEAD@{refNumber}
+
+# Get git repository URL 
+git config --get remote.origin.url

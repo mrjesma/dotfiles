@@ -2,3 +2,6 @@
 
 # Get IP in different formats (decimal, hexa, id)
 gethostip [HOSTNAME|IP]
+
+# Generate password
+openssl rand -base64 12
