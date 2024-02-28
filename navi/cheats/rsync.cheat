@@ -1,4 +1,10 @@
 % rsync
 
 # Enable ssh compression for faster transfer rate
-rsync -avPh -e "ssh -C" [SRC] [DST]
+rsync -avhP -e "ssh -C" [SRC] [DST]
+
+# Transfer with rsync compression algorithm
+rsync -avzhP [SRC] [DST]
+
+# Rsync with jump server - coppy from A to C using B
+rsync -avzhP -e "ssh -J [JUMP-B]" [SRC-A] [DST-C]

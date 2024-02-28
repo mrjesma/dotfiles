@@ -5,3 +5,13 @@ echo {a,b};
 
 # Brace expressions - run command multiple times with multiple arguments, one at time
 eval echo\ {a,b}\;
+
+# Show directory/folder size sorted by size
+su -hs ./* |sort -h
+
+# Bash shabang and strict mode
+\#!/usr/bin/env bash
+set -euo pipefail
+
+# run xargs command in background all at once, one for each outout
+cat file |xargs -I{} -P0 -n1 command {}
