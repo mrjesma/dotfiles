@@ -13,5 +13,8 @@ su -hs ./* |sort -h
 \#!/usr/bin/env bash
 set -euo pipefail
 
-# run xargs command in background all at once, one for each outout
+# Run xargs command in background all at once, one for each outout
 cat file |xargs -I{} -P0 -n1 command {}
+
+# Check permission of each folder in a path
+namei -l /var/ssh/ansible/id_rsa.pub

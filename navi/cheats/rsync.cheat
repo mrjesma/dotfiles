@@ -8,3 +8,9 @@ rsync -avzhP [SRC] [DST]
 
 # Rsync with jump server - coppy from A to C using B
 rsync -avzhP -e "ssh -J [JUMP-B]" [SRC-A] [DST-C]
+
+# Non standard port
+rsync -avzhP -e "ssh -p [PORT]" [SRC] [DST]
+
+# Rsync from two remotes with ssh tunnel (run from a host that can access both remotes)
+ssh -R localhost:22000:[DST-HOST]:22 [SRC-HOST] 'rsync -e "ssh -p 22000" -vaP [SRC-FILE] localhost:[DST-FILE]'

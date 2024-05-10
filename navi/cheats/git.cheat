@@ -13,4 +13,5 @@ git reflog
 git reset --hard HEAD@{refNumber}
 
 # Get git repository URL 
-git config --get remote.origin.url
+;git config --get remote.origin.url # commented
+git remote -v
