@@ -8,15 +8,20 @@ export XDG_CONFIG_HOME=$HOME/.config
 export EDITOR=vim
 
 # CUSTON ENVIRONMENT
-set -a
-source ~/repos/siemens-env/siscon
-set +a
+if [[ -d ~/repos/siemens-env/siscon ]]; then
+    set -a
+    source ~/repos/siemens-env/siscon
+    set +a
+fi
 
 # ALIASES
 alias ta='tmux attach -t'
 alias ts='tmux new-session -s'
 alias navip='navi --print |tee >(clip.exe)'
 alias navic='navi --print --cheatsh'
+alias ls='ls -F --color=auto'
+alias vim='nvim'
+alias v='nvim'
 
 # BINDS
 bindkey -s ^t 'tmux-sessionizer.sh\n'
