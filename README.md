@@ -1,5 +1,5 @@
 # My personal .config files repo
-This is how my current work environment is configured - Windows machine + WSL2 + WezTerm 
+This is how my current work environment is configured - Windows machine + WSL2 + ~~WezTerm~~ Windows Terminal 
 
 ## Setup WSL
 In Windows command line run
@@ -70,11 +70,12 @@ Install [Navi](https://github.com/denisidoro/navi)
 `sudo BIN_DIR=/usr/local/bin bash -c "$(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)"`
 
 ## Aditional Windows setup
-### WezTerm
-Download and install [WezTerm](https://wezfurlong.or) terminal emulator for windows
-`https://wezfurlong.org/wezterm/install/windows.html#installing-on-windows`
-
-Copy [wezterm.lua](wezterm/wezterm.lua) to `C:\Program Files\WezTerm` directory.
+### Terminal emulator
+I used to use Windows Terminal, then I went to WezTerm and now I'm back to using Windows Terminal.
+#### Windows Terminal
+Download and install Windows Terminal from [Microsoft Store](https://aka.ms/terminal), or manually from its [repo](https://github.com/microsoft/terminal/releases) and installing with the following command: `Add-AppxPackage Microsoft.WindowsTerminal_<versionNumber>.msixbundle`
+#### WezTerm
+Download and install [WezTerm](https://wezfurlong.or) terminal emulator for windows following this [guide](https://wezfurlong.org/wezterm/install/windows.html#installing-on-windows). Copy [wezterm.lua](wezterm/wezterm.lua) to `C:\Program Files\WezTerm` directory.
 
 ### win32yank.exe
 Download win32yank and put it in your path (eg.: C:\Windows\System32) for a seamless clipboard between Windows and WSL. `https://github.com/equalsraf/win32yank`
