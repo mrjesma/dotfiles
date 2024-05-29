@@ -18,3 +18,6 @@ cat file |xargs -I{} -P0 -n1 command {}
 
 # Check permission of each folder in a path
 namei -l /var/ssh/ansible/id_rsa.pub
+
+# List process sorting by nice / check priority
+ps axo pid,comm,nice,cls --sort=-nice
