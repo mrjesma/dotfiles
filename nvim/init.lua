@@ -25,6 +25,9 @@ vim.opt.rtp:prepend(lazypath)
 -- Define lazy plugins list
 local plugins = {
 
+  -- Operations based on indentation
+  'michaeljsmith/vim-indent-object',
+
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
