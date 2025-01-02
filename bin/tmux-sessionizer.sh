@@ -9,6 +9,7 @@ if [[ $# -eq 1 ]]; then
   host=$1
 else
   selected=$(cat ~/repos/siemens-env/hosts | fzf --no-sort)
+  echo $selected
   selected_name=$(echo $selected |awk -F'|' '{print $1}' |sed 's/ $//' |sed 's/ /_/g')
   host=$(echo $selected |awk -F'|' '{print $2}')
 fi
