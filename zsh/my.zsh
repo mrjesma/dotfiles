@@ -38,3 +38,8 @@ psg() {
 diff() {
     command diff -u --color=auto "$@" | diff-so-fancy | less --tabs=4 -FRXSi
 }
+
+git-sp7() {
+    /home/ajunior/repos/copel-d_adms_sp2/sadm/git/git-sp7 "$@" -cfg /home/ajunior/.gitdir/git.xml -trg /home/ajunior/repos/copel-d_adms_sp2
+}
+
