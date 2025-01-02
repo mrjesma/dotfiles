@@ -2,3 +2,6 @@
 
 # Synchronize command to all panes
 setw synchronize-panes on
+
+# Save tmux pane history to file
+tmux capture-pane -pS - > ae.txt

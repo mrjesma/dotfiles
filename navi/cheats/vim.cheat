@@ -32,3 +32,6 @@ ctrl+w [whjkl]
 
 # Show relative line number
 :set relativenumber
+
+# Disable case sensiteve
+:set ignorecase

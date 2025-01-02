@@ -15,3 +15,6 @@ git reset --hard HEAD@{refNumber}
 # Get git repository URL 
 ;git config --get remote.origin.url # commented
 git remote -v
+
+# Compare commits between two branchs
+git log --no-merges --left-right --oneline <BRANCH1>..<BRANCH2>
