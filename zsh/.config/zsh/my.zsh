@@ -20,6 +20,7 @@ alias ts='tmux new-session -s'
 alias navip='navi --print |tee >(clip.exe)'
 alias navic='navi --print --cheatsh'
 alias ls='ls -F --color=auto'
+alias ll='ls -laF --color=auto'
 alias vim='nvim'
 alias v='nvim'
 
