@@ -40,7 +40,15 @@ diff() {
     command diff -u --color=auto "$@" | diff-so-fancy | less --tabs=4 -FRXSi
 }
 
-git-sp7() {
-    /home/ajunior/repos/copel-d_adms_sp2/sadm/git/git-sp7 "$@" -cfg /home/ajunior/.gitdir/git.xml -trg /home/ajunior/repos/copel-d_adms_sp2
-}
-
+# CUSTOM FUNCTION FOR GIT SP7 COMMANDS
+if [[ -d "$HOME/repos/copel/sadm" ]]; then
+    gitdef() {
+        if [[ $1 == "sp7" ]]; then
+            \git "$@" -cfg $HOME/.gitdir/git.xml -trg $HOME/repos/copel
+        else
+            \git "$@"
+        fi
+    }
+    export PATH=$HOME/repos/copel/sadm/git:$PATH
+    alias git=gitdef
+fi
