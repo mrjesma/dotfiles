@@ -1,0 +1,10 @@
+% oracle
+
+# List all tables that the user has access
+set pagesize 2000
+SELECT table_name FROM all_tables ORDER BY table_name;
+
+# List all tables filter by owner
+set pagesize 2000
+SELECT table_name FROM all_tables WHERE owner='<OWNER>' ORDER BY table_name;
+
