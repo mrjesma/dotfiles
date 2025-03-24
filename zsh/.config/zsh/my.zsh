@@ -44,7 +44,7 @@ diff() {
 if [[ -d "$HOME/repos/copel/sadm" ]]; then
     gitdef() {
         if [[ $1 == "sp7" ]]; then
-            \git "$@" -cfg $HOME/.gitdir/git.xml -trg $HOME/repos/copel --no-afterburn
+            \git "$@" -cfg $HOME/.gitdir/git.xml -trg $HOME/repos/copel --no-afterburn 2>/dev/null
         else
             \git "$@"
         fi
