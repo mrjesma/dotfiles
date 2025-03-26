@@ -8,3 +8,7 @@ SELECT table_name FROM all_tables ORDER BY table_name;
 set pagesize 2000
 SELECT table_name FROM all_tables WHERE owner='<OWNER>' ORDER BY table_name;
 
+# Configure sqlplus session
+set pagesize 2000
+set linesize 2000
+set history on
