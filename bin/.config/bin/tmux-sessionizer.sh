@@ -8,10 +8,14 @@ if [[ $# -eq 1 ]]; then
   selected=$1
   host=$1
 else
-  selected=$(cat ~/repos/siemens-env/hosts | fzf --no-sort)
+  selected=$(cat ~/repos/siemens-env/hosts | fzf --no-sort --cycle --print-query | tail -1)
   echo $selected
-  selected_name=$(echo $selected |awk -F'|' '{print $1}' |sed 's/ $//' |sed 's/ /_/g')
-  host=$(echo $selected |awk -F'|' '{print $2}')
+  selected_name=$(echo $selected | awk -F'|' '{print $1}' | sed 's/ $//' | sed 's/ /_/g')
+  host=$(echo $selected | awk -F'|' '{print $2}')
+
+  # if no entry was selected in fzf get the search string and uses it as selected_host and host
+  selected_name=${selected_name:=$selected}
+  host=${host:=$selected}
 fi
 
 if [[ -z $selected ]]; then
@@ -22,18 +26,18 @@ tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
   # No tmux server started. Create new session and attach it to it.
-  tmux new-session -s $selected_name "ssh $host"
+  tmux new-session -s "${selected_name^^}" "ssh $host"
   exit 0
 fi
 
-if ! tmux has-session -t=$selected_name 2> /dev/null; then
+if ! tmux has-session -t="${selected_name^^}" 2>/dev/null; then
   # Tmux server is started but no session with name $selected_name. Create new dettached session"
-  tmux new-session -ds $selected_name "ssh $host"
+  tmux new-session -ds "${selected_name^^}" "ssh $host"
 fi
 
 # Switch or attach to existing tmux session with name: $selected_name
 if [[ -z $TMUX ]]; then
-  tmux attach-session -t $selected_name
+  tmux attach-session -t "${selected_name^^}"
 else
-  tmux switch-client -t $selected_name
+  tmux switch-client -t "${selected_name^^}"
 fi
