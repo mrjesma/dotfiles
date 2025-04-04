@@ -30,3 +30,6 @@ ssh-keygen -l -E md5 -f ~/.ssh/id_rsa.pub
 
 # Hold private keys not asking multiple times for password
 eval $(ssh-agent) ; ssh-add /home/ajunior/.ssh/id_ed25519
+
+# Manual watch
+while true; do clear; date; <COMMAND>; sleep 2; done
