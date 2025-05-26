@@ -1,0 +1,7 @@
+% docker
+
+# Clean ALL docker
+docker stop $(docker ps -a -q)
+docker system prune -a
+docker volume prune
+docker network prune
