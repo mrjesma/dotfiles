@@ -52,3 +52,13 @@ if [[ -d "$HOME/repos/copel/sadm" ]]; then
     export PATH=$HOME/repos/copel/sadm/git:$PATH
     alias git=gitdef
 fi
+
+gitxml() {
+    if [[ $# -eq 0 ]]; then
+        vim ~/.gitdir/git.xml
+    else
+        sed -E "s/ref=\"\S+\"/ref=\"$1\"/" ~/.gitdir/git.xml  > /tmp/git.xml
+        mv /tmp/git.xml ~/.gitdir/git.xml
+        git sp7 checkoutcfg
+    fi
+}
