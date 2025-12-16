@@ -19,6 +19,7 @@ alias ls='ls -F --color=auto'
 alias ll='ls -laF --color=auto'
 alias vim='nvim'
 alias v='nvim'
+alias gcm='git commit -m'
 
 # KEY BIND
 bind -x '"\C-t":"tmux-sessionizer.sh"'
